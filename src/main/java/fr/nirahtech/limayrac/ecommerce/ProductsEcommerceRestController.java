@@ -7,10 +7,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -35,7 +35,7 @@ public class ProductsEcommerceRestController implements ProductsApi {
 
     @GetMapping(value="/{id}")
     @Override
-    public Optional<Product> findProductById(@RequestParam(value = "id", required = true) Long id) {
+    public Optional<Product> findProductById(@PathVariable(value = "id") Long id) {
         return this.productsService.findProductById(id);
     }
 
@@ -47,7 +47,7 @@ public class ProductsEcommerceRestController implements ProductsApi {
 
     @DeleteMapping(value="/{id}")
     @Override
-    public void deleteProduct(@RequestParam(value = "id", required = true) Long id) {
+    public void deleteProduct(@PathVariable(value = "id") Long id) {
         this.productsService.deleteProduct(id);
     }
     
