@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ChatbotApplication",
+            "request": "launch",
+            "mainClass": "fr.limayrac.esi2.chatbot.ChatbotApplication",
+            "projectName": "chatbot"
+        },
+        {
+            "type": "java",
             "name": "DumbApplication",
             "request": "launch",
             "mainClass": "fr.limayrac.esi2.dumb.DumbApplication"

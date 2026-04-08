@@ -3,7 +3,11 @@ package fr.limayrac.esi2.chatbot;
 import java.time.LocalDateTime;
 import java.util.function.Function;
 
+import org.springframework.context.annotation.Description;
+import org.springframework.stereotype.Service;
 
+@Service("dateTimeTool")
+@Description("Retrive the real date and time of the server.")
 public class DateTimeTool implements Function<DateTimeTool.Request, DateTimeTool.Response> {
     
     public record Request() { };
@@ -16,6 +20,4 @@ public class DateTimeTool implements Function<DateTimeTool.Request, DateTimeTool
         final String time = datetime.toLocalTime().toString();
         return new Response(date, time);
     };
-
-
 }
