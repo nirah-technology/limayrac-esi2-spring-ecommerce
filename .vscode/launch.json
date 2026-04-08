@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DumbApplication",
+            "request": "launch",
+            "mainClass": "fr.limayrac.esi2.dumb.DumbApplication"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RegistryApplication<registry>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "fr.limayrac.esi2.registry.RegistryApplication",
+            "projectName": "registry",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=32923 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=registry"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EcommerceApplication<ecommerce>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "fr.nirahtech.limayrac.ecommerce.EcommerceApplication",
+            "projectName": "ecommerce",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=40049 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ecommerce"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DumbApplication<dumb>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "fr.limayrac.esi2.dumb.DumbApplication",
+            "projectName": "dumb",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
